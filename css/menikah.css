@@ -5,6 +5,14 @@
   justify-content: center;
 }
 
+:root {
+  --llc: 247, 240, 226;
+  --mlc: 216, 179, 112;
+  --mc: 102, 85, 65;
+  --mdc: 102, 85, 65;
+  --dc: 87, 60, 65;
+  --ddc: 73, 61, 48
+}
 * {
   box-sizing: border-box;
 }
@@ -29,17 +37,17 @@ html {
 }
 
 .navbar-item.is-active{
-  border-bottom: 2px solid #996E6D;
+  border-bottom: 2px solid rgba(var(--dc));
 }
 
 .a.navbar-item{
-  font-color: #996E6D;
+  color: rgba(var(--llc));
 }
 
 
 .hero {
   background-image: url(https://picsum.photos/id/25/1920/1080);
-  background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url("https://picsum.photos/id/381/1920/1080") no-repeat;
+  background: linear-gradient(rgba(var(--mlc), 0.65), rgba(var(--mc), 0.45)), rgba(0, 0, 0, 0.55) url("../image/hl.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   color: white;
@@ -47,7 +55,19 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
-
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  width: 60%;
+  max-height: 100%;
+  display: block;
+overflow: none;
+  
+}
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
 
 .hero .title {
   font-family: 'Rouge Script', sans-serif;
@@ -102,17 +122,17 @@ html {
 }
 
 .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li.is-active a {
-  border-bottom: 2px solid #996E6D;
+  border-bottom: 2px solid rgba(var(--dc));
 }
 
 .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li a {
-  color: #996E6D;
+  color: rgba(var(--dc));
 }
 
 .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li a:hover {
-  color: #996E6D;
+  color: rgba(var(--dc));
   transition: all .2s ease-in-out;
-  border-bottom: 2px solid #c28285;
+  border-bottom: 2px solid rgba(var(--mc));
 }
 
 
@@ -131,12 +151,12 @@ html {
 }
 
 .main-content .section-dark {
-  background-color: #F4E2E2;
+  background-color: rgba(var(--llc));
   padding: 80px 40px;
 }
 
 .main-content .section-darker {
-  background-color: #EDD2D1;
+  background-color: rgba(var(--lc));
   padding: 80px 40px;
 }
 
@@ -157,9 +177,9 @@ html {
 }
 
 .main-content .section-dark.resume button {
-  border: 2px solid #996E6D;
+  border: 2px solid rgba(var(--dc));
   background: white;
-  color: #996E6D;
+  color: rgba(var(--dc));
   height: 50px;
   width: 250px;
   font-size: 1rem;
@@ -167,7 +187,7 @@ html {
 }
 
 .main-content .section-dark.resume .fa-download {
-  color: #996E6D;
+  color: rgba(var(--dc));
 }
 
 .main-content .section-dark.my-work {
@@ -192,14 +212,14 @@ html {
   border-radius: 5px;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+  box-shadow: 0 5px 20px rgba(var(--mdc), 0.3);
 }
 
 .main-content .section-dark.my-work .work-item:hover {
   -webkit-transform: scale(1.055) translateY(-2px);
   transform: scale(1.055) translateY(-2px);
-  -webkit-box-shadow: 0 2px 25px 0 rgba(30, 30, 30, 0.1);
-  box-shadow: 0 2px 25px 0 rgba(30, 30, 30, 0.1);
+  -webkit-box-shadow: 0 2px 25px 0 rgba(var(--mdc), 0.1);
+  box-shadow: 0 2px 25px 0 rgba(var(--mdc), 0.1);
 }
 
 .section-map {
@@ -227,7 +247,7 @@ html {
 .main-content .section-light.regular-section .right-image img {
   border-radius: 11px;
   margin: 20px;
-  box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+  box-shadow: 0 5px 20px rgba(var(--mdc), 0.3);
 }
 
 @media (max-width: 599px) {
@@ -273,7 +293,7 @@ html {
 
 .main-content .section-color.pertanyaan {
   padding: 100px;
-  background-color: #996E6D;
+  background-color: rgba(var(--dc));
   color: white;
 }
 
@@ -290,16 +310,16 @@ html {
 .main-content .section-title {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
-  color: #996E6D;
+  color: rgba(var(--dc));
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 0px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .nama-lengkap {
   font-family: 'Rouge Script', sans-serif;
-  color: #996E6D;
+  color: rgba(var(--dc));
   font-size: 3.5rem;
   letter-spacing: 0px;
   padding-bottom: 6px;
@@ -309,7 +329,7 @@ html {
 .ampersand {
 font-size: 5rem;
 font-family: 'Rouge Script', sans-serif;
-color: #996E6D;
+color: rgba(var(--dc));
 line-height: 5rem;
 display: inline-block;
 vertical-align: middle;
@@ -350,7 +370,7 @@ vertical-align: middle;
   line-height: 25px;
   text-align: center;
   vertical-align: middle;
-  background: #c28285;
+  background: rgba(var(--mc));
   color: whitesmoke;    
 }
 
@@ -379,7 +399,7 @@ vertical-align: middle;
 }
 
 .fa-download {
-  color: #43485c;
+  color: rgba(var(--ddc));
 }
 
 .divider {
@@ -397,8 +417,8 @@ vertical-align: middle;
 }
 
 #toTop {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   display: none;
   position: fixed;
   bottom: 20px;
@@ -406,12 +426,13 @@ vertical-align: middle;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #996E6D;
+  background-color: rgba(var(--dc));
   color: white;
   cursor: pointer;
+  
   border-radius: 50%;
   font-size: 2rem;
-  box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+  box-shadow: 0 5px 20px rgba(var(--mdc), 0.3);
 }
 
 #toTop a {
@@ -419,18 +440,18 @@ vertical-align: middle;
 }
 
 #toTop:hover {
-  background-color: #BC8887;
+  background-color: rgba(var(--ddc));
 }
 
 ::-webkit-scrollbar {
   width: 8px;
-  background-color: #F4E2E2;
+  background-color: rgba(var(--llc));
 }
 
 ::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 6px #996E6D;
-  -webkit-box-shadow: inset 0 0 6px #996E6D;
-  background-color: #BC8887;
+  box-shadow: inset 0 0 6px rgba(var(--dc));
+  -webkit-box-shadow: inset 0 0 6px rgba(var(--dc));
+  background-color: rgba(var(--ddc));
 }
 
 body.preloader-site {
@@ -440,7 +461,7 @@ body.preloader-site {
 .preloader-wrapper {
   height: 100%;
   width: 100%;
-  background: #D8A9A8;
+  background: rgba(var(--mdc));
   position: fixed;
   top: 0;
   left: 0;
@@ -489,10 +510,10 @@ body.preloader-site {
 
 .btn-cta:hover {
   color:white;
-  background-color: #bf7877;
+  background-color: rgba(var(--mdc));
   font-size: 1.2rem;
   border-radius: 10px;
-  border: 2px solid #bf7877;
+  border: 2px solid rgba(var(--mdc));
   width:  210px;
   height: 65px;
   align-items: center;
@@ -500,12 +521,12 @@ body.preloader-site {
 }
 
 .btn-cta {
-  background-color: #996E6D;
+  background-color: rgba(var(--dc));
   width:  210px;
   height: 65px;
   color: white;
   font-size: 1.2rem;
-  border: 2px solid #996E6D;
+  border: 2px solid rgba(var(--dc));
   border-radius: 10px;
   align-items: center;
   margin: 1rem;
@@ -553,28 +574,27 @@ body.preloader-site {
 {color:ghostwhite}
 
 
-.dusty-pink {color: #D8A9A8}
+.dusty-pink {color: rgba(var(--mdc))}
 .dusty-pink-lighter {color: #EDD2D1}
-.dusty-pink-lightest {color: #F4E2E2}
-.dusty-pink-darker {color: #BC8887}
-.dusty-pink-darkest {color: #996E6D}
+.dusty-pink-lightest {color: rgba(var(--llc))}
+.dusty-pink-darker {color: rgba(var(--ddc))}
+.dusty-pink-darkest {color: rgba(var(--dc))}
 
 .tile {
   border-radius: 10px;
 }
 
-
 .foto1 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-kang-emil.jpg");
+  background-image: linear-gradient(rgba(var(--mlc), 0.2), rgba(48, 47, 47, 0.8)), url("../image/story/esl.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat:no-repeat; 
   min-height: 24rem;
 }
 
 
 .foto2 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-cashbac.jpg");
+  background-image: linear-gradient(rgba(var(--mlc), 0.2), rgba(48, 47, 47, 0.8)), url("../image/story/renato2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -582,7 +602,7 @@ body.preloader-site {
 }
 
 .foto3 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-selfie.jpg");
+  background-image: linear-gradient(rgba(var(--mlc), 0.2), rgba(48, 47, 47, 0.8)), url("../image/story/croatia.jpg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -590,7 +610,7 @@ body.preloader-site {
 }
 
 .foto4 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-lamaran.jpg");
+  background-image: linear-gradient(rgba(var(--mlc), 0.2), rgba(48, 47, 47, 0.8)), url("../image/story/first4000.jpg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -598,7 +618,7 @@ body.preloader-site {
 }
 
 .foto5 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-red-car.jpg");
+  background-image: linear-gradient(rgba(var(--mlc), 0.2), rgba(48, 47, 47, 0.8)), url("../image/story/multipitch.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -607,7 +627,23 @@ body.preloader-site {
 
 
 .foto6 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-engagement-ami.jpg");
+  background-image: linear-gradient(rgba(var(--mlc), 0.2), rgba(48, 47, 47, 0.8)), url("../image/story/greece.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+.foto7 {
+  background-image: linear-gradient(rgba(var(--mlc), 0.2), rgba(48, 47, 47, 0.8)), url("../image/story/fl.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+.foto8 {
+  background-image: linear-gradient(rgba(var(--mlc), 0.2), rgba(48, 47, 47, 0.8)), url("../image/story/engagement.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -615,6 +651,13 @@ body.preloader-site {
 }
 
 
+.foto9 {
+  background-image: linear-gradient(rgba(var(--mlc), 0.2), rgba(48, 47, 47, 0.8)), url("../image/story/ski.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
 
 .title-foto {
   font-size: 18pt;
@@ -639,11 +682,12 @@ body.preloader-site {
   background-image: url(../image/divider-flowers-leaves.png);
   background-position: bottom -30px center;
   background-repeat: no-repeat;
-  background-size: initial;
+  background-size: 350px;
+
 }
 
 .instagram {
-  color: #996E6D;
+  color: rgba(var(--dc));
   font-size: 1.25rem;
   font-weight: 900;
   margin-top: 0.5rem;
